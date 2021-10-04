@@ -1,0 +1,24 @@
+{
+    'id':1,
+    'img':'assets/images/prop.jpg',
+    'name':'Seemas Villa',
+    'type':'House',
+    'price':100000
+  },
+  {
+    'id':2,
+    'img':'assets/images/prop2.jpg',
+    'name':'Mahams Villa',
+    'type':'House',
+    'price':100000
+  },
+  {
+    'id':3,
+    'img':'assets/images/prop.jpg',
+    'name':'SR Villa',
+    'type':'House',
+    'price':100000
+  },
+
+
+
