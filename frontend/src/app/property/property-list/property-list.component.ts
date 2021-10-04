@@ -13,7 +13,7 @@ properties: any;
   }
 
   ngOnInit(): void {
-     this.http.get('data/properties.json').subscribe(
+     this.http.get('assets/data/properties.json').subscribe(
        data => {
          this.properties=data;
          console.log("success");
