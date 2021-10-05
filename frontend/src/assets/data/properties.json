@@ -19,6 +19,14 @@
     "type":"House",
     "price":100000
   }
+  ,
+    {
+    "id":3,
+    "img":"assets/images/prop3.jpg",
+    "name":"AA Villa",
+    "type":"House",
+    "price":100000
+  }
 
 
 
