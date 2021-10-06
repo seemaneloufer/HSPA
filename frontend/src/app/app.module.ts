@@ -13,9 +13,11 @@ import { PropertyDetailComponent } from './property/property-detail/property-det
 const appRoutes: Routes = [
   { path: '', component: PropertyListComponent },
   { path: 'add-property', component: AddPropertyComponent },
-  { path: 'rent-property', component: AddPropertyComponent },
+  { path: 'rent-property', component: PropertyListComponent },
   { path: 'buy-property', component: AddPropertyComponent },
-  { path: 'property-detail/:id', component: PropertyDetailComponent }
+
+  { path: 'property-detail/:id', component: PropertyDetailComponent },
+  { path: '**', component: PropertyListComponent }
 ];
 
 

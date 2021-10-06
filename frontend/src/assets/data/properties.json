@@ -1,29 +1,33 @@
 [{
     "id":1,
-    "img":"assets/images/prop.jpg",
+    "img":"prop.jpg",
+    "SellRent":1,
     "name":"Seemas Villa",
     "type":"House",
     "price":100000
   },
   {
     "id":2,
-    "img":"assets/images/prop2.jpg",
+    "img":"prop2.jpg",
+    "SellRent":2,
     "name":"Mahams Villa",
     "type":"House",
     "price":100000
   },
   {
     "id":3,
-    "img":"assets/images/prop.jpg",
+    "img":"prop4.jpg",
     "name":"SR Villa",
+    "SellRent":1,
     "type":"House",
     "price":100000
   }
   ,
     {
     "id":3,
-    "img":"assets/images/prop3.jpg",
+    "img":"prop3.jpg",
     "name":"AA Villa",
+    "SellRent":2,
     "type":"House",
     "price":100000
   }
