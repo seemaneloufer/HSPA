@@ -1,6 +1,9 @@
+import { AlertifyService } from './../../services/alertify.service';
 import { User } from 'src/app/model/user';
 import { UserServiceService } from './../../services/user-service.service';
 import { Component, OnInit } from '@angular/core';
+
+
 import {
   FormBuilder,
   FormControl,
@@ -15,8 +18,12 @@ import {
 export class UserRegisterComponent implements OnInit {
   registrationForm: FormGroup;
   user: User;
-  userSubmitted:boolean;
-  constructor(private fb: FormBuilder, private userService: UserServiceService) {}
+  userSubmitted: boolean;
+  constructor(
+    private fb: FormBuilder,
+    private userService: UserServiceService,
+    private alertify:AlertifyService
+  ) {}
 
   ngOnInit(): void {
     // this.registrationForm = new FormGroup(
@@ -56,14 +63,14 @@ export class UserRegisterComponent implements OnInit {
       ? null
       : { notmatched: true };
   }
-userData(): User{
-  return this.user={
-    userName:this.userName.value,
-    email: this.email.value,
-    password:this.password.value,
-    mobile:this.mobile.value
+  userData(): User {
+    return (this.user = {
+      userName: this.userName.value,
+      email: this.email.value,
+      password: this.password.value,
+      mobile: this.mobile.value,
+    });
   }
-}
 
   // GETTER METHOD
 
@@ -87,11 +94,16 @@ userData(): User{
   }
   onSubmit() {
     console.log(this.registrationForm);
-    this.userSubmitted=true;
-    //this.user = Object.assign(this.user, this.registrationForm.value);
-    this.userService.addUser(this.userData());
-    this.registrationForm.reset();
-    this.userSubmitted=false;
-  }
+    this.userSubmitted = true;
 
+    if (this.registrationForm.valid) {
+      //this.user = Object.assign(this.user, this.registrationForm.value);
+      this.userService.addUser(this.userData());
+      this.registrationForm.reset();
+      this.userSubmitted = false;
+      this.alertify.success('Done!');
+    } else {
+      this.alertify.error('NOT Done!');
+    }
+  }
 }
