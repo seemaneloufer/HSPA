@@ -1,3 +1,4 @@
+import { UserServiceService } from './services/user-service.service';
 import { HousingService } from './services/housing.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,7 +13,6 @@ import { PropertyDetailComponent } from './property/property-detail/property-det
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserLoginComponent } from './user/user-login/user-login.component';
 import { UserRegisterComponent } from './user/user-register/user-register.component';
-
 
 
 const appRoutes: Routes = [
@@ -46,7 +46,7 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [HousingService],
+  providers: [HousingService, UserServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
